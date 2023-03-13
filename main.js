@@ -18,6 +18,9 @@ const app = Vue.createApp({
         },
         updateImage(image) {
             this.image = image;
+        },
+        removeFromCart() {
+            this.cart > 0 ? this.cart-- : "";
         }
     }
 })
