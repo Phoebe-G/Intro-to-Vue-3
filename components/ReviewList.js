@@ -15,6 +15,9 @@ app.component('review-list', {
                 {{ review.name }} gave this {{ review.rating }} stars
                 <br/>
                 {{ review.review }}
+                <br/>
+                <div v-if="review.recommend">{{ review.name }} would recommend this product!</div>
+                <div v-if="!review.recommend">{{ review.name }} would not recommend this product.</div>
             </li>
         </ul>
     </div>
